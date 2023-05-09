@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <script>
+    </script>
+    <style>
+      .top-movies {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 200px 0 200px;
+        padding: 0 150px 0 150px;
+      }
+
+      .movie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #8B6331;
+        border-radius: 10px;
+        margin: 5px;
+        position: relative;
+      }
+
+      .rank-1 {
+        margin: 50px;
+      }
+
+      .rank-2 {
+        margin: 10px 0 0 300px;
+      }
+
+      .rank-3 {
+        margin: 20px 300px 0 0;
+      }
+
+      .rank_num {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        opacity: 0.8;
+      }
+
+      .movie img {
+        width: 150px;
+        height: 225px;
+      }
+
+      .title {
+        margin-top: 10px;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .rating {
+        margin-top: 5px;
+        font-size: 16px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-movies">
+      <div class="movie rank-2">
+        <span class="rank_num">2</span>
+        <img src="movie-poster-1.jpg" />
+        <h2 class="title">Movie Title 2</h2>
+        <div class="rating">9.2</div>
+      </div>
+      <div class="movie rank-1">
+        <span class="rank_num">1</span>
+        <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F6b0eb68a4c944965ae78c83112bbb799c25b876b" />
+        <h2 class="title">가디언즈 오브 갤럭시: Volume 3</h2>
+        <div class="rating">9.5</div>
+      </div>
+      <div class="movie rank-3">
+        <span class="rank_num">3</span>
+        <img src="movie-poster-3.jpg" />
+        <h2 class="title">Movie Title 3</h2>
+        <div class="rating">8.9</div>
+      </div>
+    </div>
+
+  </body>
+</html>
