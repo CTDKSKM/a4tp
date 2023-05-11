@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
+
+* {
+  font-family: 'Gowun Batang', serif;
+}
+
+.flickpicks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  border-style: solid;
+  border-color: #8b6331;
+  border-width: 20px;
+}
+
+.flickpicks>h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-size: 100px;
+  letter-spacing: 40px;
+  color: #8b6331;
+}
+
+.rank-movies {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 600px;
+  margin: 50px auto 0px auto;
+}
+
+.card-rank {
+  color: #8b6331;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 1px;
+  border: 5px solid #8b6331;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+img {
+  vertical-align: top;
+}
+
+.card-img-top:hover:after,
+.card-img-top:hover>.hover_text {
+  display: block;
+}
+
+.card-img-top:after,
+.hover_text {
+  display: none;
+}
+
+.card-img-top:hover>.hover_info {
+  display: block;
+}
+
+.card-img-top:after,
+.hover_info {
+  display: none;
+}
+
+.card-img-top:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.692);
+  z-index: 10;
+}
+
+.hover_text {
+  position: absolute;
+  top: 10%;
+  left: 15px;
+  color: #fff;
+  z-index: 20;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.hover_info {
+  position: absolute;
+  left: 30px;
+  bottom: 10%;
+  z-index: 20;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.info_btn {
+  box-shadow: inset 0px 1px 3px 0px #000000a1;
+  background: linear-gradient(to bottom, #000000a1);
+  background-color: #000000a1;
+  border: 3px solid #c0c0c069;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 14px 80px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #9b9b9b86;
+}
+
+.info_btn:hover {
+  background: linear-gradient(to bottom, #000000a1);
+  background-color: #000000a1;
+}
+
+.info_btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.info_btn2 {
+  box-shadow: inset 0px 1px 3px 0px #000000a1;
+  background: linear-gradient(to bottom, #000000a1);
+  background-color: #000000a1;
+  border: 3px solid #c0c0c069;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 120px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #9b9b9b86;
+}
+
+.info_btn2:hover {
+  background: linear-gradient(to bottom, #000000a1);
+  background-color: #000000a1;
+}
+
+.info_btn2:active {
+  position: relative;
+  top: 1px;
+}
+
+#rank1 {
+  margin: 20px auto 100px auto;
+}
+
+#rank2 {
+  margin: 120px 20px 100px 10%;
+}
+
+#rank3 {
+  margin: 220px 10% 100px 20px;
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.card-star {
+  margin-top: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.user-write-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.user-write-btn>button {
+  margin-right: 20px;
+}
+
+.user-write-open-btn {
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 10px;
+  background-color: #bd8700;
+  border: 2px solid #8B6350;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.user-write-close-btn {
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 10px;
+  background-color: #ffffff;
+  border: 2px solid #8B6350;
+  border-radius: 10px;
+  color: #8B6350;
+}
+
+.user-write-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 300px;
+  margin: 20px auto 20px auto;
+  box-shadow: 0px 0px 3px 0px gray;
+}
+
+#user-write-url {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 40%;
+}
+
+#user-write-comment {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 80%;
+}
+
+#user-write-nickname {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 35%;
+}
+
+.user-write-star {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  width: 80%;
+}
+
+.btn-warning {
+  writing-mode: vertical-lr;
+  position: absolute;
+  background-color: #bd8700;
+  border: 2px solid #8B6350;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: white;
+  width: 10%;
+  height: 80%;
+  right: 2%;
+  top: 10%;
+}
+
+.list-movies {
+  width: 1200px;
+  margin: 20px auto 20px auto;
+}
+
+/* A4_상세페이지 */
+
+.container {
+  width: 50%;
+  flex-wrap: wrap;
+  display: inline-flex;
+  align-items: center;
+
+  border-radius: 1px;
+  border: 5px solid #8b6331;
+  border-radius: 10px;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.col {
+  width: 50%;
+}
+
+.container img {
+  width: 100%;
+}
+
+
+.movie-container {
+  width: 49%;
+  max-width: 800px;
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.movie-synopsis,
+.comment-form {
+  margin-top: 10px;
+}
+
+.movie-info {
+  margin-top: 20px;
+}
+
+.movie-info-item {
+  margin-bottom: 10px;
+}
+
+.movie-comments {
+  margin-top: 30px;
+}
+
+body {
+  text-align: center;
+}
+
+.comment-form textarea {
+  width: 100%;
+}
