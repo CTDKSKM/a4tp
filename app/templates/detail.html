@@ -6,7 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ movie.title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', path='/index.css') }}">
+    <style>
+
+        .container {
+            width: 50%;
+            flex-wrap: wrap;
+            display: inline-flex;
+            align-items: center;
+
+            border-radius: 1px;
+            border: 5px solid #8b6331;
+            border-radius: 10px;
+            margin: 5px auto;
+            padding: 5px;
+        }
+        
+        .col {
+            width: 50%;
+            margin:
+        }
+
+        .container img {
+            width: 100%;
+        }
+        
+
+        .movie-container {
+            width: 49%;
+            max-width: 800px;
+        }
+
+        .movie-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .movie-synopsis {
+            margin-top: 10px;
+        }
+
+        .movie-info {
+            margin-top: 20px;
+        }
+
+        .movie-info-item {
+            margin-bottom: 10px;
+        }
+
+        .movie-comments {
+            margin-top: 30px;
+        }
+
+        .comment-form {
+            margin-top: 10px;
+        }
+        body {
+            text-align: center;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+        }
+
+        
+    </style>
 </head>
 
 <body>
@@ -15,7 +78,7 @@
         <div class="col">
             <div class="card">
                 <img src="{{ movie.img }}"
-                    class="card-img-top" alt="...">
+                    class="card-img-detail" alt="...">
                 <div class="card-body">
                     <p class="card-star">⭐</p>
                 </div>
@@ -23,9 +86,6 @@
         </div>
         <div class="movie-container">
             <h1 class="movie-title">영화제목: {{ movie.title }}</h1>
-<!--            <div class="movie-description">-->
-<!--                <p>줄거리: </p>-->
-<!--            </div>-->
             <div class="movie-info">
                 <div class="movie-info-item">
                     <strong>카테고리:</strong> {{ movie.category }}
@@ -37,17 +97,21 @@
                     <strong>러닝타임:</strong> {{ movie.running_time }}
                 </div>
                 <div class="movie-info-item">
-                    <strong>Ranking:</strong> {{ movie.rating }}
+                    <strong>추천인의 점수:</strong> {{ movie.rating }}점
+                </div>
+                <div class="movie-info-item">
+                    <strong>감상평:</strong> {{ movie.comment }}
                 </div>
             </div>
             <div class="movie-comments">
-                <h2>Comments</h2>
+                <h2>댓글달기</h2>
+                <h4>영화를 추천해주신분께 감사인사를 드려보세요!</h4>
                 <div class="comments-list">
                 </div>
                 <form class="comment-form">
-                    <textarea rows="4" cols="50" placeholder="{{ movie.comment }}" disabled></textarea>
+                    <textarea rows="4" cols="50" placeholder=""></textarea>
                     <br>
-<!--                    <button type="submit">작성</button>-->
+                    <button type="submit">작성</button>
                 </form>
             </div>
         </div>
