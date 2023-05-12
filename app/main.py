@@ -13,16 +13,14 @@ from sqlalchemy.orm import Session
 
 from bs4 import BeautifulSoup as BS
 
-from .database import SessionLocal
-from . import models as m
-from . import schemas as s
+from app.database import SessionLocal
+from app import models as m
+from app import schemas as s
 
 
-templates = Jinja2Templates(directory="")
+templates = Jinja2Templates(directory="app/templates")
 
-MovieInfo = namedtuple("MovieInfo", ["title", "published_at", "total_audience", "running_time",  "category", "img"])
-
-app = FastAPI()
+MovieInfo = namedtuple("MovieInfo", ["title", "published_at", "running_time",  "category", "img"])
 
 origins = [
     "http://localhost:8080",
@@ -31,7 +29,8 @@ origins = [
     "http://127.0.0.1:5500",
 ]
 
-app.mount("/static", StaticFiles(directory=""), name="static")
+app = FastAPI()
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -107,7 +106,6 @@ def create_movie(movie: s.MovieWrite, db: Session = Depends(get_db)):
                        img=crawled_movie.img,
                        published_at=crawled_movie.published_at,
                        rating=movie.rating,
-                       running_time=crawled_movie.running_time,
                        comment=movie.comment,
                        category=crawled_movie.category)
     db.add(db_movie)
