@@ -11,5 +11,6 @@ class Movie(Base):
     category = Column(String, index=True)
     title = Column(String, index=True)
     published_at = Column(String, nullable=True)
+    running_time = Column(String, nullable=True)
     rating = Column(Integer, nullable=True)
     comment = Column(String)

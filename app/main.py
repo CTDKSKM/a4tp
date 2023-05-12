@@ -66,14 +66,10 @@ def crawl_movie(url):
     running_time = soup.select_one(
         '#mainContent > div > div.box_basic > div.info_detail > div.detail_cont > div:nth-child(1) > dl:nth-child(5) > dd'
     ).get_text(strip=True)
-    total_audience = soup.select_one(
-        '#mainContent > div > div.box_basic > div.info_detail > div.detail_cont > div:nth-child(2) > dl:nth-child(2) > dd'
-    ).get_text()
 
     return MovieInfo(
         title=title,
         published_at=published_at,
-        total_audience=total_audience,
         running_time=running_time,
         category=category,
         img=img,
