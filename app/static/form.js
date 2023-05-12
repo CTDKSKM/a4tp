@@ -22,9 +22,9 @@ function posting() {
     })
 }
 
-// function open_box() {
-//     $('#post-box').show()
-// }
-// function close_box() {
-//     $('#post-box').hide()
-// }
+function open_box() {
+    $('#user-write').show()
+}
+function close_box() {
+    $('#user-write').hide()
+}
